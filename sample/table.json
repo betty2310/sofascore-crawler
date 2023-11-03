@@ -1,0 +1,66 @@
+{
+  "standings": [
+    {
+      "tournament": {
+        "name": "Premier League",
+        "slug": "premier-league"
+      },
+      "type": "total",
+      "name": "Premier League 23/24",
+      "rows": [
+        {
+          "team": {
+            "name": "Tottenham Hotspur",
+            "slug": "tottenham-hotspur",
+            "shortName": "Tottenham ",
+            "userCount": 582323,
+            "nameCode": "TOT",
+            "type": 0,
+            "id": 33
+          },
+          "descriptions": [],
+          "promotion": {
+            "text": "Champions League",
+            "id": 804
+          },
+          "position": 1,
+          "matches": 10,
+          "wins": 8,
+          "scoresFor": 22,
+          "scoresAgainst": 9,
+          "id": 866363,
+          "losses": 0,
+          "draws": 2,
+          "points": 26
+        },
+        {
+          "team": {
+            "name": "Arsenal",
+            "slug": "arsenal",
+            "shortName": "Arsenal",
+            "userCount": 952129,
+            "nameCode": "ARS",
+            "type": 0,
+            "id": 42
+          },
+          "descriptions": [],
+          "promotion": {
+            "text": "Champions League",
+            "id": 804
+          },
+          "position": 2,
+          "matches": 10,
+          "wins": 7,
+          "scoresFor": 23,
+          "scoresAgainst": 8,
+          "id": 866347,
+          "losses": 0,
+          "draws": 3,
+          "points": 24
+        }
+      ],
+      "id": 104941,
+      "updatedAtTimestamp": 1686837629
+    }
+  ]
+}

@@ -1,0 +1,96 @@
+{
+  "confirmed": false,
+  "home": {
+    "players": [
+      {
+        "avgRating": 7.33,
+        "player": {
+          "name": "Alphonse Ar\u00e9ola",
+          "slug": "alphonse-areola",
+          "shortName": "A. Ar\u00e9ola",
+          "position": "G",
+          "userCount": 2784,
+          "id": 96531,
+          "country": {
+            "alpha2": "FR",
+            "name": "France"
+          },
+          "marketValueCurrency": "EUR",
+          "dateOfBirthTimestamp": 730771200
+        },
+        "shirtNumber": 23,
+        "jerseyNumber": "23",
+        "position": "G",
+        "substitute": false
+      }
+    ],
+    "formation": "4-2-3-1",
+    "missingPlayers": [
+      {
+        "player": {
+          "name": "Vladim\u00edr Coufal",
+          "firstName": "",
+          "lastName": "",
+          "slug": "vladimir-coufal",
+          "shortName": "V. Coufal",
+          "position": "D",
+          "userCount": 1499,
+          "id": 138024,
+          "country": {
+            "alpha2": "CZ",
+            "name": "Czech Republic"
+          },
+          "marketValueCurrency": "EUR",
+          "dateOfBirthTimestamp": 714441600
+        },
+        "type": "doubtful",
+        "reason": 1
+      }
+    ]
+  },
+  "away": {
+    "players": [
+      {
+        "avgRating": 6.9,
+        "player": {
+          "name": "Jordan Pickford",
+          "slug": "jordan-pickford",
+          "shortName": "J. Pickford",
+          "position": "G",
+          "userCount": 3428,
+          "id": 138530,
+          "country": {
+            "alpha2": "EN",
+            "name": "England"
+          },
+          "marketValueCurrency": "EUR",
+          "dateOfBirthTimestamp": 762998400
+        },
+        "shirtNumber": 1,
+        "jerseyNumber": "1",
+        "position": "G",
+        "substitute": false
+      }
+    ],
+    "missingPlayers": [
+      {
+        "player": {
+          "name": "Dele Alli",
+          "slug": "dele-alli",
+          "shortName": "D. Alli",
+          "position": "M",
+          "userCount": 6184,
+          "id": 198028,
+          "country": {
+            "alpha2": "EN",
+            "name": "England"
+          },
+          "marketValueCurrency": "EUR",
+          "dateOfBirthTimestamp": 829180800
+        },
+        "type": "missing",
+        "reason": 1
+      }
+    ]
+  }
+}

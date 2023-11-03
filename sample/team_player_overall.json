@@ -1,0 +1,113 @@
+{
+  "topPlayers": {
+    "rating": [
+      {
+        "statistics": {
+          "rating": 7.8111111111111,
+          "id": 1077354,
+          "type": "overall",
+          "appearances": 9
+        },
+        "playedEnough": true,
+        "player": {
+          "name": "Mohamed Salah",
+          "slug": "mohamed-salah",
+          "shortName": "M. Salah",
+          "position": "F",
+          "userCount": 170883,
+          "id": 159665
+        }
+      },
+      {
+        "statistics": {
+          "rating": 7.3111111111111,
+          "id": 1077370,
+          "type": "overall",
+          "appearances": 9
+        },
+        "playedEnough": true,
+        "player": {
+          "name": "Dominik Szoboszlai",
+          "slug": "dominik-szoboszlai",
+          "shortName": "D. Szoboszlai",
+          "position": "M",
+          "userCount": 19870,
+          "id": 869856
+        }
+      },
+      {
+        "statistics": {
+          "rating": 7.2625,
+          "id": 1077346,
+          "type": "overall",
+          "appearances": 8
+        },
+        "playedEnough": true,
+        "player": {
+          "name": "Andrew Robertson",
+          "slug": "andrew-robertson",
+          "shortName": "A. Robertson",
+          "position": "D",
+          "userCount": 10471,
+          "id": 262911
+        }
+      }
+    ],
+    "goals": [
+      {
+        "statistics": {
+          "goals": 7,
+          "id": 1077354,
+          "type": "overall",
+          "appearances": 9
+        },
+        "playedEnough": true,
+        "player": {
+          "name": "Mohamed Salah",
+          "slug": "mohamed-salah",
+          "shortName": "M. Salah",
+          "position": "F",
+          "userCount": 170883,
+          "id": 159665
+        }
+      },
+      {
+        "statistics": {
+          "goals": 3,
+          "id": 1077330,
+          "type": "overall",
+          "appearances": 8
+        },
+        "playedEnough": true,
+        "player": {
+          "name": "Darwin N\u00fa\u00f1ez",
+          "slug": "darwin-nunez",
+          "shortName": "D. N\u00fa\u00f1ez",
+          "position": "F",
+          "userCount": 34045,
+          "id": 924871
+        }
+      }
+    ],
+    "expectedGoals": [
+      {
+        "statistics": {
+          "goals": 7,
+          "expectedGoals": 6.5893,
+          "id": 1077354,
+          "type": "overall",
+          "appearances": 9
+        },
+        "playedEnough": true,
+        "player": {
+          "name": "Mohamed Salah",
+          "slug": "mohamed-salah",
+          "shortName": "M. Salah",
+          "position": "F",
+          "userCount": 170883,
+          "id": 159665
+        }
+      }
+    ]
+  }
+}

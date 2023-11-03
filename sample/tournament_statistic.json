@@ -1,0 +1,72 @@
+{
+  "topTeams": {
+    "avgRating": [
+      {
+        "team": {
+          "name": "Manchester City",
+          "slug": "manchester-city",
+          "shortName": "Manchester City",
+          "userCount": 0,
+          "type": 0,
+          "id": 17
+        },
+        "statistics": {
+          "avgRating": 7.2344537815126,
+          "id": 11129,
+          "matches": 9,
+          "awardedMatches": 0
+        }
+      },
+      {
+        "team": {
+          "name": "Tottenham Hotspur",
+          "slug": "tottenham-hotspur",
+          "shortName": "Tottenham Hotspur",
+          "userCount": 0,
+          "type": 0,
+          "id": 33
+        },
+        "statistics": {
+          "avgRating": 7.1716129032258,
+          "id": 11274,
+          "matches": 10,
+          "awardedMatches": 0
+        }
+      }
+    ],
+    "goalsScored": [
+      {
+        "team": {
+          "name": "Newcastle United",
+          "slug": "newcastle-united",
+          "shortName": "Newcastle United",
+          "userCount": 0,
+          "type": 0,
+          "id": 39
+        },
+        "statistics": {
+          "goalsScored": 26,
+          "id": 11197,
+          "matches": 10,
+          "awardedMatches": 0
+        }
+      },
+      {
+        "team": {
+          "name": "Arsenal",
+          "slug": "arsenal",
+          "shortName": "Arsenal",
+          "userCount": 0,
+          "type": 0,
+          "id": 42
+        },
+        "statistics": {
+          "goalsScored": 23,
+          "id": 11145,
+          "matches": 10,
+          "awardedMatches": 0
+        }
+      }
+    ]
+  }
+}
