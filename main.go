@@ -6,15 +6,26 @@ import (
 	"fmt"
 	"log"
 	"os"
+	"path/filepath"
+	"strings"
 	"time"
 
 	"github.com/joho/godotenv"
 )
 
+const DEFAULT_PATH = "output"
+
 func writeJson(data any, filename string) {
+	// Create any missing directories in the path
+	err := os.MkdirAll(filepath.Dir(filename), 0755)
+	if err != nil {
+		panic(err)
+	}
+
+	// Try to create a new file
 	file, err := os.Create(filename)
 	if err != nil {
-		println(err)
+		panic(err)
 	}
 	defer file.Close()
 
@@ -37,10 +48,26 @@ func main() {
 	}
 	date := os.Getenv("DATE")
 	fmt.Println("DATE", date)
-	lineup, err := server.GetTable()
+	matches, err := server.GetMatches(date)
 	if err != nil {
 		log.Println(err)
 	}
+	fmt.Println("Crawl all matches on", date)
+	matchesFilePath := filepath.Join(DEFAULT_PATH, strings.Replace(date, "-", "_", -1), "matches.json")
+	fmt.Println(matchesFilePath)
+	writeJson(matches, matchesFilePath)
+	// for _, event := range matches.Events {
+	// 	if event.Tournament.Name == "Premier League" {
+	// 		go func(id int) {
+	// 			fmt.Println("\tCrawl match ", event.Slug, " lineup")
+	// 			lineup, err := server.GetLineups(id)
+	// 			if err != nil {
+	// 				log.Println(err)
+	// 			}
 
-	writeJson(lineup, "lineup.json")
+	// 			writeJson()
+	// 		}(event.ID)
+	// 	}
+	// }
+
 }

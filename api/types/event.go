@@ -36,22 +36,17 @@ type Score struct {
 }
 
 type Event struct {
-	Tournament               Tournament `json:"tournament"`
-	RoundInfo                RoundInfo  `json:"roundInfo"`
-	CustomId                 string     `json:"customId"`
-	Status                   Status     `json:"status"`
-	WinnerCode               int        `json:"winnerCode"`
-	HomeTeam                 Team       `json:"homeTeam"`
-	AwayTeam                 Team       `json:"awayTeam"`
-	HomeScore                Score      `json:"homeScore"`
-	AwayScore                Score      `json:"awayScore"`
-	HasGlobalHighlights      bool       `json:"hasGlobalHighlights"`
-	HasEventPlayerStatistics bool       `json:"hasEventPlayerStatistics"`
-	HasEventPlayerHeatMap    bool       `json:"hasEventPlayerHeatMap"`
-	ID                       int        `json:"id"`
-	StartTimestamp           int        `json:"startTimestamp"`
-	EndTimestamp             int        `json:"endTimestamp"`
-	Slug                     string     `json:"slug"`
+	Tournament     Tournament `json:"tournament"`
+	RoundInfo      RoundInfo  `json:"roundInfo"`
+	Status         Status     `json:"status"`
+	HomeTeam       Team       `json:"homeTeam"`
+	AwayTeam       Team       `json:"awayTeam"`
+	HomeScore      Score      `json:"homeScore"`
+	AwayScore      Score      `json:"awayScore"`
+	ID             int        `json:"id"`
+	StartTimestamp int        `json:"startTimestamp"`
+	EndTimestamp   int        `json:"endTimestamp"`
+	Slug           string     `json:"slug"`
 }
 
 type Events struct {
