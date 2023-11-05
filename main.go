@@ -155,23 +155,29 @@ func main() {
 	}
 	wg.Wait()
 
+	wg = sync.WaitGroup{}
 	color.Blue("Crawl team information")
 	for _, team := range table.Standings[0].Rows {
-		filePath := filepath.Join(DEFAULT_PATH, strings.Replace(date, "-", "_", -1), "Teams", team.Team.Name)
-		color.Yellow("\tCrawl %s overall statistic", team.Team.Name)
-		teamSt, err := server.GetTeamStatistic(team.Team.ID)
-		if err != nil {
-			log.Println(err)
-		}
-		preFilePath := filepath.Join(filePath, "overall_statistic.json")
-		writeJson(teamSt, preFilePath)
+		wg.Add(1)
+		go func(team types.RowData) {
+			defer wg.Done()
+			filePath := filepath.Join(DEFAULT_PATH, strings.Replace(date, "-", "_", -1), "Teams", team.Team.Name)
+			color.Yellow("\tCrawl %s overall statistic", team.Team.Name)
+			teamSt, err := server.GetTeamStatistic(team.Team.ID)
+			if err != nil {
+				log.Println(err)
+			}
+			preFilePath := filepath.Join(filePath, "overall_statistic.json")
+			writeJson(teamSt, preFilePath)
 
-		color.White("\tCrawl %s player overall", team.Team.Name)
-		teamPl, err := server.GetTeamPlayerOverall(team.Team.ID)
-		if err != nil {
-			log.Println(err)
-		}
-		plFilePath := filepath.Join(filePath, "player.json")
-		writeJson(teamPl, plFilePath)
+			color.White("\tCrawl %s player overall", team.Team.Name)
+			teamPl, err := server.GetTeamPlayerOverall(team.Team.ID)
+			if err != nil {
+				log.Println(err)
+			}
+			plFilePath := filepath.Join(filePath, "player.json")
+			writeJson(teamPl, plFilePath)
+		}(team)
 	}
+	wg.Wait()
 }
