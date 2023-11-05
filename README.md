@@ -6,5 +6,6 @@
 ### Instructions
 ```bash
 $ go mod tidy
+$ cp .env.example .env
 $ go run .
 ```
