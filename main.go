@@ -101,6 +101,7 @@ func main() {
 	matches := <-mc
 
 	wg := sync.WaitGroup{}
+	color.Blue("Crawl match information")
 	for _, event := range matches.Events {
 		if event.Tournament.Name == "Premier League" && event.Tournament.ID == 1 {
 			wg.Add(1)
@@ -109,17 +110,18 @@ func main() {
 				defer wg.Done()
 				if event.Status.Type == "inprogress" {
 					filePath = filepath.Join(filePath, "in_progress_matches")
-					// inprogress match statistic
-					color.Yellow("\tCrawl match %s statistic", event.Slug)
-					statistic, err := server.GetStatistic(event.ID)
-					if err != nil {
-						log.Println(err)
-					}
-					name := fmt.Sprint(event.ID) + "_statistic.json"
-					st := filepath.Join(filePath, event.Slug, name)
-					writeJson(statistic, st)
 				}
 				filePath = filepath.Join(filePath, event.Slug)
+
+				// statistic
+				color.Yellow("\tCrawl match %s statistic", event.Slug)
+				statistic, err := server.GetStatistic(event.ID)
+				if err != nil {
+					log.Println(err)
+				}
+				name := fmt.Sprint(event.ID) + "_statistic.json"
+				st := filepath.Join(filePath, name)
+				writeJson(statistic, st)
 
 				// lineup
 				color.Cyan("\tCrawl match %s lineup", event.Slug)
@@ -127,7 +129,7 @@ func main() {
 				if err != nil {
 					log.Println(err)
 				}
-				name := fmt.Sprint(event.ID) + "_lineup.json"
+				name = fmt.Sprint(event.ID) + "_lineup.json"
 				lineupFilePath := filepath.Join(filePath, name)
 				writeJson(lineup, lineupFilePath)
 
@@ -142,7 +144,7 @@ func main() {
 				writeJson(h2h, h2hFilePath)
 
 				// pregame form
-				fmt.Println("\tCrawl match", event.Slug, "pregame form")
+				color.Magenta("\tCrawl match %s pregame form", event.Slug)
 				pre, err := server.GetPregameForm(event.ID)
 				if err != nil {
 					log.Println(err)
