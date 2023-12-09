@@ -23,4 +23,5 @@ go.work
 .env
 data.json
 output
+data
 *.idea
